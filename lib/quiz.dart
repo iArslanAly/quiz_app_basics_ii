@@ -25,10 +25,10 @@ class _Quiz extends State<Quiz> {
     });
   }
    */
-  var activeScreen = 'questionsScreen';
+  var activeScreen = 'start_screen';
   void switchScreen() {
     setState(() {
-      activeScreen = 'questionsScreen';
+      activeScreen = 'questions_screen';
     });
   }
 
@@ -40,7 +40,7 @@ class _Quiz extends State<Quiz> {
           decoration:
               const BoxDecoration(color: Color.fromARGB(255, 30, 109, 212)),
           //child: activeScreen,
-          child: activeScreen == 'questionsScreen'
+          child: activeScreen == 'questions_screen'
               ? const QuestionsScreen()
               : StartScreen(switchScreen),
         ),
